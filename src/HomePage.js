@@ -5,9 +5,7 @@ import DrawerAppBar from "./DrawerAppBar";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ReactMarkdown from 'react-markdown'
-import HomePage from "./HomePage";
-import {Container, Grid} from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
+import DetailView from "./DetailView";
 
 /*import {
     createBrowserRouter,
@@ -30,19 +28,34 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            markdown: ""
+            cases: []
         }
+    }
+
+    componentDidMount() {
+        // Simple GET request using fetch
+        fetch('cases/caselist.txt')
+            .then(response => response.text())
+            .then(data => {
+                var linesplit = data.split(/\r\n|\r|\n/g);
+                for (var i = 0; i < linesplit.length; i++) {
+                    if (linesplit[i] === "") {
+                        linesplit.splice(i, 1);
+                    }
+                }
+                console.log(linesplit)
+                this.setState({cases: linesplit})
+            });
     }
 
     render() {
         return (
             <div>
-                <DrawerAppBar>
-                    <Container fixed>
-                        <HomePage />
-                    </Container>
-
-                </DrawerAppBar>
+                {this.state.cases.map((storycase, i) => {
+                    return (
+                        <DetailView key={i} filename={storycase}/>
+                    )
+                })}
             </div>
         )
     }
