@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
 import React, {Component} from 'react';
 import DrawerAppBar from "./DrawerAppBar";
 import Box from "@mui/material/Box";
@@ -25,7 +23,7 @@ class DetailView extends React.Component {
 
     render() {
         return (
-            <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5, background: }}>
+            <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5}}>
                 <CardContent>
                     <Typography variant="body1">
                         <ReactMarkdown>{this.state.markdown}</ReactMarkdown>

@@ -1,29 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import React, {Component} from 'react';
-import DrawerAppBar from "./DrawerAppBar";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import ReactMarkdown from 'react-markdown'
+import React from 'react';
 import DetailView from "./DetailView";
 
-/*import {
-    createBrowserRouter,
-    createRoutesFromElements,
-    Route,
-    RouterProvider,
-} from "react-router-dom";
-
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Root/>}>
-            <Route path="dashboard" element={<Dashboard/>}/>
-            {/!* ... etc. *!/}
-        </Route>
-    )
-);*/
-
-class App extends React.Component {
+class HomePage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -33,7 +11,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        // Simple GET request using fetch
         fetch('cases/caselist.txt')
             .then(response => response.text())
             .then(data => {
@@ -62,4 +39,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default HomePage;

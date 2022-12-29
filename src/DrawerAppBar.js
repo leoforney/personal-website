@@ -35,7 +35,7 @@ function DrawerAppBar(props) {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
+                        <ListItemButton sx={{ textAlign: 'center' }} href={"/" + item.toLowerCase()}>
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
@@ -69,7 +69,7 @@ function DrawerAppBar(props) {
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
+                            <Button key={item} sx={{ color: '#fff' }} href={"/" + item.toLowerCase()}>
                                 {item}
                             </Button>
                         ))}
@@ -102,10 +102,6 @@ function DrawerAppBar(props) {
 }
 
 DrawerAppBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
 };
 
