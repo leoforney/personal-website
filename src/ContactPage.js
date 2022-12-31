@@ -7,9 +7,11 @@ import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 
-class App extends React.Component {
+class ContactPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +30,7 @@ class App extends React.Component {
                 {
                     "name": "Email",
                     "icon": <EmailIcon />,
-                    "link": "mailto:forneyleo@gmail.com?subject=Let's%20talk!"
+                    "link": "mailto:forneyleo@gmail.com"
                 },
             ]
         }
@@ -48,7 +50,7 @@ class App extends React.Component {
                 justifyContent="center"
             >
 
-                <Card sx={{minWidth: '40%', justifyContent: "center"}}>
+                <Card sx={{ justifyContent: "center"}}>
                     <CardMedia
                         component="img"
                         alt="green iguana"
@@ -78,11 +80,14 @@ class App extends React.Component {
                                     </ListItemButton>
                                 )
                             })}
-
+                            <Button href="/leo-forney.vcf">
+                                Save contact
+                            </Button>
                         </List>
 
                     </CardActions>
                 </Card>
+                <Box sx={{height: 15}} />
 
             </Grid>
 
@@ -91,4 +96,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default ContactPage;

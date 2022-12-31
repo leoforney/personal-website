@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import DrawerAppBar from "./DrawerAppBar";
-import HomePage from "./HomePage";
+import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
 import {Container, Fab, Fade, useScrollTrigger} from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -15,13 +15,16 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
+import ErrorPage from "./NotFoundPage";
+import AboutPage from "./AboutPage";
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/">
-            <Route path="" element={<HomePage/>}/>
-            <Route path="home" element={<HomePage/>}/>
+        <Route path="/" errorElement={<ErrorPage />}>
+            <Route path="" element={<AboutPage/>}/>
+            <Route path="about" element={<AboutPage />}/>
+            <Route path="projects" element={<ProjectsPage/>}/>
             <Route path="contact" element={<ContactPage/>}/>
         </Route>
     )

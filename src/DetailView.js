@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import ReactMarkdown from 'react-markdown'
 import {Card, CardContent} from "@mui/material";
+import rehypeRaw from 'rehype-raw';
 
 class DetailView extends React.Component {
 
@@ -26,7 +27,7 @@ class DetailView extends React.Component {
             <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5}}>
                 <CardContent>
                     <Typography variant="body1">
-                        <ReactMarkdown>{this.state.markdown}</ReactMarkdown>
+                        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{this.state.markdown}</ReactMarkdown>
                     </Typography>
                 </CardContent>
             </Card>

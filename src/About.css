@@ -1,0 +1,22 @@
+.flashingText {
+    padding-right: 20px;
+}
+
+.flashingText:after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: black;
+    opacity: 0;
+    display: inline-block;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
