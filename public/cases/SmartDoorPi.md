@@ -7,8 +7,8 @@ want to pay for the subscription anymore? Can you repurpose that system and inst
 
 After completing my project _SmartDoorPi_ I can say for certain that you easily repurpose an old security system.
 
-For heading into the project I had **2** objectives:
-- Create a low-cost solution for people that want to ditch their home security system subscription
+Initially starting the project I had **2** objectives:
+- Create a low-cost solution for people that want to eliminate their home security system subscription
 - Getting experience with IOT and embedded devices
 
 This project was initially started in 2016, but has evolved immensely since then. The first prototype that I developed was with a Raspberry Pi 3
@@ -19,19 +19,19 @@ My favorite feature is that you could provision pins and attach listeners to the
 
 As soon as I could retrieve data from the pins, I decided the best IOT platform was Samsung SmartThings. Because we already had Z-Wave devices in our home (including a siren) 
 it would be ideal to tie the door pins into it. This could be done by creating a "device handler" in the SmartThings IDE and updating the contact sensor status. For some reason, Samsung designed the 
-contact sensor device type to _not accept changes_. What a bummer. So to find a workaround, I used this community made Universal Virtual Device Type called [uDTH](https://community.smartthings.com/t/release-universal-virtual-device-type-and-translator/47836?page=7).
+contact sensor device type to _not accept changes_. Disappointing. So to find a workaround, I used this community made Universal Virtual Device Type called [uDTH](https://community.smartthings.com/t/release-universal-virtual-device-type-and-translator/47836?page=7).
 It worked like a charm. The system was then working fully and could update door changes in sub-millisecond time.
 
 However, one issue with this solution. It needed to be restarted every so often because the JVM would _crash_ and/or _hang_.
 
 Fast-forward to 2021, I have accumulated a good amount of knowledge in C/C++ and wanted to revisit this project.
 
-Instead of a Raspberry Pi 3, I utilized the new low-power Raspberry Pi Zero W. Here's it mounted in the old panel, connected to all of the door contact pins.
+Instead of a Raspberry Pi 3, I utilized the new low-power Raspberry Pi Zero W. Here's it mounted in the old panel, connected to all the door contact pins.
 <br/><img src="img/smartdoorpi.jpg" alt="drawing" style="width: 100%; height: auto; max-width: 400px" alt="Raspberry Pi Zero W mounted"/><br/>
 For interfacing with the GPIO I used the library that Pi4J was built upon. This 
 library was [WiringPi](http://wiringpi.com/). When it came to sending the data, I used libcurl and linked it dynamically to the CMake project.
 
-The way the "SmartApp" was setup, it had two endpoints per door. No data needed to be sent in the request, but the endpoints needed to be hit to change the door.
+The way the "SmartApp" was set up, it had two endpoints per door. No data needed to be sent in the request, but the endpoints needed to be hit to change the door.
 
 Here's an excerpt from the re-worked `main.cpp`:
 ```cpp
