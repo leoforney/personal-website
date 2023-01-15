@@ -23,6 +23,6 @@ models had to be moderately small to view them without stutter.
 
 Here's a demo of the project working with a personal model:
 
-<br/><img src="img/pointcloudvrdemo.gif" alt="drawing" style="width: 100%; height: auto; max-width: 400px" alt="PointCloudVR demo"/><br/>
+![PointCloud VR Demo](/img/pointcloudvrdemo.gif)
 
 Keep in mind, this project is still a work in progress. It will still be updated with more features.

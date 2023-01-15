@@ -51,7 +51,7 @@ class AboutPage extends React.Component {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sx={{height: "100%", width: "100%", mt: 5, mb: 10}}>
-                            <Button variant={"outlined"} sx={{height: "100%", width: "100%"}} href={"/projects"}>Check
+                            <Button variant={"contained"} sx={{height: "100%", width: "100%"}} href={"/projects"}>Check
                                 out my work</Button>
                         </Grid>
                     </Grid>

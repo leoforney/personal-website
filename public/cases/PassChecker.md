@@ -30,7 +30,7 @@ Lastly, the app had a manual entry for if the license plate was covered or the c
 
 Here's a gif of all of this working in action:
 
-<br/><img src="img/passchecker.gif" alt="drawing" style="width: 100%; height: auto; max-width: 400px" alt="PointCloudVR demo"/><br/>
+![Passchecker demo](/img/passchecker.gif)
 
 When the guards would be checking, they could only go about a max of 5-10 mph. For a golf-cart that is very doable and faster than the speed of manually checking.
 What I personally learned from this project are REST APIs, text recognition, and database design. I also utilized my Android development experience for this so that was also a nice bonus.

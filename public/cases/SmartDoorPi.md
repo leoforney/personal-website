@@ -27,7 +27,7 @@ However, one issue with this solution. It needed to be restarted every so often 
 Fast-forward to 2021, I have accumulated a good amount of knowledge in C/C++ and wanted to revisit this project.
 
 Instead of a Raspberry Pi 3, I utilized the new low-power Raspberry Pi Zero W. Here's it mounted in the old panel, connected to all the door contact pins.
-<br/><img src="img/smartdoorpi.jpg" alt="drawing" style="width: 100%; height: auto; max-width: 400px" alt="Raspberry Pi Zero W mounted"/><br/>
+![Raspberry Pi Zero W mounted](/img/smartdoorpi.jpg)
 For interfacing with the GPIO I used the library that Pi4J was built upon. This 
 library was [WiringPi](http://wiringpi.com/). When it came to sending the data, I used libcurl and linked it dynamically to the CMake project.
 

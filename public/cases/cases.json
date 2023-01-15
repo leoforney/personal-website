@@ -1,0 +1,14 @@
+[
+  {
+    "name": "PointCloudVR",
+    "description": "A simple but easy to use Point Cloud viewer, written in WebVR"
+  },
+  {
+    "name": "SmartDoorPi",
+    "description": "Low-budget security system made with SmartThings and Raspberry Pi"
+  },
+  {
+    "name": "PassChecker",
+    "description": "Automated license plate parking checker application made on Android"
+  }
+]

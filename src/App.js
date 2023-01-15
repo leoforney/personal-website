@@ -17,6 +17,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./NotFoundPage";
 import AboutPage from "./AboutPage";
+import ProjectDetailPage from "./ProjectDetailPage";
 
 
 const router = createBrowserRouter(
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
             <Route path="about" element={<AboutPage />}/>
             <Route path="projects" element={<ProjectsPage/>}/>
             <Route path="contact" element={<ContactPage/>}/>
+            <Route path="projects/:name" element={<ProjectDetailPage />} />
         </Route>
     )
 );

@@ -54,7 +54,7 @@ class ContactPage extends React.Component {
                     <CardMedia
                         component="img"
                         alt="green iguana"
-                        sx={{maxHeight: "40vh"}}
+                        sx={{maxHeight: "60vh"}}
                         image="/img/headshot1.jpg"
                     />
                     <CardContent>
