@@ -5,6 +5,10 @@ import Box from "@mui/material/Box";
 import './About.css';
 import CssBaseline from "@mui/material/CssBaseline";
 import Button from "@mui/material/Button";
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { firebaseApp } from "./WebsiteFirebaseConfig";
+
+const analytics = getAnalytics(firebaseApp);
 
 const theme = createTheme({
     typography: {
@@ -26,6 +30,13 @@ const theme = createTheme({
 });
 
 class AboutPage extends React.Component {
+
+    componentDidMount() {
+        logEvent(analytics, 'page_opened',
+            {
+                name: "About"
+            });
+    }
 
     render() {
 

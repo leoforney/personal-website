@@ -19,7 +19,6 @@ import ErrorPage from "./NotFoundPage";
 import AboutPage from "./AboutPage";
 import ProjectDetailPage from "./ProjectDetailPage";
 
-
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" errorElement={<ErrorPage />}>

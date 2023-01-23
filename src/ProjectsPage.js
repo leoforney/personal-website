@@ -1,6 +1,10 @@
 import React from 'react';
 import DetailView from "./DetailView";
 import Typography from "@mui/material/Typography";
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { firebaseApp } from "./WebsiteFirebaseConfig";
+
+const analytics = getAnalytics(firebaseApp);
 
 class ProjectsPage extends React.Component {
 
@@ -17,6 +21,10 @@ class ProjectsPage extends React.Component {
             .then(data => {
                 console.log(data)
                 this.setState({cases: data})
+            });
+        logEvent(analytics, 'page_opened',
+            {
+                name: "Projects"
             });
     }
 

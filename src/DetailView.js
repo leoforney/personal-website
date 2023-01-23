@@ -8,6 +8,10 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import {orange} from "@mui/material/colors";
 import Button from "@mui/material/Button";
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { firebaseApp } from "./WebsiteFirebaseConfig";
+
+const analytics = getAnalytics(firebaseApp)
 
 export function CustomCodeBlock({ as, href, ...otherProps }) {
     return (
@@ -31,6 +35,7 @@ export function CustomImageBlock({ as, href, ...otherProps }) {
     )
 }
 
+
 class DetailView extends React.Component {
 
     constructor(props) {
@@ -45,6 +50,10 @@ class DetailView extends React.Component {
             fetch('/cases/' + this.props.filename + ".md")
                 .then(response => response.text())
                 .then(data => this.setState({markdown: data}));
+            logEvent(analytics, 'project_detail_opened',
+                {
+                    name: this.props.filename
+                });
         }
 
     }
@@ -88,7 +97,11 @@ class DetailView extends React.Component {
         }
 
         return (
-            <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5, background: backgroundColor}}>
+            <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5, background: backgroundColor}} onClick={() => {
+                if (this.props.description) {
+                    window.location.href = '/projects/' + this.props.filename;
+                }
+            }}>
                 <CardContent>
                     <Typography variant="body1">
                         {textBlock}

@@ -9,6 +9,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import { getAnalytics, logEvent } from "firebase/analytics";
+import { firebaseApp } from "./WebsiteFirebaseConfig";
+
+const analytics = getAnalytics(firebaseApp);
 
 
 class ContactPage extends React.Component {
@@ -37,7 +41,10 @@ class ContactPage extends React.Component {
     }
 
     componentDidMount() {
-
+        logEvent(analytics, 'page_opened',
+            {
+                name: "Contact"
+            });
     }
 
     render() {
@@ -63,14 +70,18 @@ class ContactPage extends React.Component {
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                             I'm always open to a good discussion about anything. Whether that be a business proposal,
-                            job offer, networking, or just chatting.
+                            discussing new technology, networking, or just chatting.
                         </Typography>
                     </CardContent>
-                    <CardActions>
-                        <List>
+                    <CardActions sx={{ width: "100%" }}>
+                        <List sx={{ width: "100%" }}>
                             {this.state.socials.map((social) => {
                                 return (
-                                    <ListItemButton size="small" href={social.link}>
+                                    <ListItemButton size="small" href={social.link} sx={{ width: "100%" }} onClick={() => {
+                                        logEvent(analytics, "social_clicked", {
+                                            name: social.name
+                                        })
+                                    }}>
                                         <ListItemAvatar>
                                             <Avatar>
                                                 {social.icon}
@@ -80,11 +91,12 @@ class ContactPage extends React.Component {
                                     </ListItemButton>
                                 )
                             })}
-                            <Button href="/leo-forney.vcf">
+                            <Button variant={"contained"} href="/leo-forney.vcf" sx={{ mt: 2 }} onClick={() => {
+                                logEvent(analytics, 'contact_downloaded');
+                            }}>
                                 Save contact
                             </Button>
                         </List>
-
                     </CardActions>
                 </Card>
                 <Box sx={{height: 15}} />
