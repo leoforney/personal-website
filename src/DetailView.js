@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import {Card, CardActions, CardContent} from "@mui/material";
 import rehypeRaw from 'rehype-raw';
 import './DetailView.css';
+import MuiImageSlider from 'mui-image-slider';
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import {orange} from "@mui/material/colors";
@@ -73,10 +74,66 @@ class DetailView extends React.Component {
                 </Typography>
             </div>);
         } else {
-            textBlock = <ReactMarkdown rehypePlugins={[rehypeRaw]} components={{
+            /*
+            omponents={{
                 // Use `CustomLink` instead of anchor element `a`
                 code: CustomCodeBlock,
-                img: CustomImageBlock
+                img: CustomImageBlock,
+                optgroup: <MuiImageSlider images={[
+                'https://homepages.cae.wisc.edu/~ece533/images/airplane.png',
+                'https://homepages.cae.wisc.edu/~ece533/images/arctichare.png',
+                'https://homepages.cae.wisc.edu/~ece533/images/baboon.png',
+                'https://homepages.cae.wisc.edu/~ece533/images/barbara.png',
+                ]}/>,
+             */
+            textBlock = <ReactMarkdown rehypePlugins={[rehypeRaw]}
+                                       components={{
+                                           code({node, inline, className, children, ...props}) {
+                                               console.log(node, inline, className, children, props)
+                                               return (
+                                                   <div className={"scrollBlock"}>
+                                                       <code {...props} />
+                                                   </div>
+                                               )
+                                           },
+                                           img({node, inline, className, children, ...props}) {
+                                               return (
+                                                   <div>
+                                                       <br/>
+                                                       <Box src={props.src} alt={props.alt} component={"img"} sx={{
+                                                           width: "100%",
+                                                           height: "auto",
+                                                           maxWidth: "400px"
+                                                       }}/>
+                                                       <br/>
+                                                   </div>
+                                               )
+                                           },
+                                           /*ul({node, inline, className, children, ...props}) {
+                                               var imageChildren = [];
+                                               children.forEach(element => {
+                                                   if (element.props != null && element.props.src != null) {
+                                                       imageChildren.push(element.props.src)
+                                                   }
+                                               });
+                                               if (imageChildren.length > 0) {
+                                                   return (
+                                                       <Box>
+                                                           <MuiImageSlider images={imageChildren}
+                                                                           alwaysShowArrows={true}
+                                                                           autoplay={true}
+                                                                           arrow={true}
+                                                                           arrowsColor={"purple"}
+                                                                           arrowsBgColor={"red"}/>
+                                                       </Box>
+                                                   )
+                                               }
+                                               return (
+                                                   <ul props>
+                                                       {children}
+                                                   </ul>
+                                               )
+                                           }*/
             }}>{this.state.markdown}</ReactMarkdown>
         }
 

@@ -8,6 +8,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.2",
     "firebase": "^9.16.0",
+    "mui-image-slider": "^1.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.4",

@@ -10,5 +10,9 @@
   {
     "name": "PassChecker",
     "description": "Automated license plate parking checker application made on Android"
+  },
+  {
+    "name": "RequestIt",
+    "description": "Group music listening. Queuing and playback powered by Spotify and Spring Boot"
   }
 ]
