@@ -1,5 +1,15 @@
 [
   {
+    "name": "Ray tracing in one weekend: CUDA",
+    "description": "Ray tracing done in pure C++. Implemented in CUDA for some maximum speedup",
+    "link": "https://github.com/leoforney/ray_tracing_in_one_weekend_cuda"
+  },
+  {
+    "name": "Prosthetic Arm",
+    "description": "Cost effective myoelectric, non invasive prosthetic arm. Done for senior design in undergrad",
+    "link": "https://sdmay23-13.sd.ece.iastate.edu/"
+  },
+  {
     "name": "PointCloudVR",
     "description": "A simple but easy to use Point Cloud viewer, written in WebVR"
   },
@@ -14,5 +24,10 @@
   {
     "name": "RequestIt",
     "description": "Group music listening. Queuing and playback powered by Spotify and Spring Boot"
+  },
+  {
+    "name": "First Tech Challenge: Dynamic Signals",
+    "description": "How I got my start in robotics and understanding software architecture",
+    "link": "https://7351ftc.tumblr.com/"
   }
 ]

@@ -146,17 +146,29 @@ class DetailView extends React.Component {
         var actionBlock = null;
 
         if (this.props.description) {
-            actionBlock = (
-                <CardActions>
-                    <Button href={"/projects/" + this.props.filename}>Learn More</Button>
-                </CardActions>
-            );
+            if (this.props.link !== undefined) {
+                actionBlock = (
+                    <CardActions>
+                        <Button href={this.props.link}>Learn More</Button>
+                    </CardActions>
+                );
+            } else {
+                actionBlock = (
+                    <CardActions>
+                        <Button href={"/projects/" + this.props.filename}>Learn More</Button>
+                    </CardActions>
+                );
+            }
         }
 
         return (
             <Card sx={{pt: 2, pb: 2, pl: 5, pr: 5, mt: 5, mb: 5, background: backgroundColor}} onClick={() => {
                 if (this.props.description) {
-                    window.location.href = '/projects/' + this.props.filename;
+                    if (this.props.link !== undefined) {
+                        window.location.href = this.props.link;
+                    } else {
+                        window.location.href = '/projects/' + this.props.filename;
+                    }
                 }
             }}>
                 <CardContent>

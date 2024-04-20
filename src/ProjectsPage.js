@@ -32,11 +32,11 @@ class ProjectsPage extends React.Component {
         return (
             <div>
                 <Typography variant="h2" gutterBottom>
-                    Freelance projects
+                     Projects
                 </Typography>
                 {this.state.cases.map((storycase, i) => {
                     return (
-                        <DetailView key={i} filename={storycase.name} description={storycase.description}/>
+                        <DetailView key={i} filename={storycase.name} description={storycase.description} link={storycase.link}/>
                     )
                 })}
             </div>
