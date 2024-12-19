@@ -1,7 +1,8 @@
 import React from 'react';
 import Typography from "@mui/material/Typography";
-import {Avatar, Card, CardActions, CardContent, CardMedia, Grid, ListItemAvatar} from "@mui/material";
+import {Avatar, Card, CardActions, CardContent, CardMedia, Container, Grid, ListItemAvatar} from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
@@ -22,14 +23,19 @@ class ContactPage extends React.Component {
         this.state = {
             socials: [
                 {
-                    "name": "LinkedIn",
-                    "icon": <LinkedInIcon />,
-                    "link": "https://www.linkedin.com/in/leo-forney-82850317a/"
-                },
-                {
                     "name": "GitHub",
                     "icon": <GitHubIcon />,
                     "link": "https://github.com/leoforney"
+                },
+                {
+                    "name": "X",
+                    "icon": <XIcon />,
+                    "link": "https://x.com/leo_forney"
+                },
+                {
+                    "name": "LinkedIn",
+                    "icon": <LinkedInIcon />,
+                    "link": "https://www.linkedin.com/in/leo-forney-82850317a/"
                 },
                 {
                     "name": "Email",
@@ -49,60 +55,61 @@ class ContactPage extends React.Component {
 
     render() {
         return (
-            <Grid
-                container
-                spacing={0}
-                direction="column"
-                alignItems="center"
-                justifyContent="center"
-            >
+            <Container maxWidth={"sm"}>
+                <Grid
+                    container
+                    spacing={0}
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                >
 
-                <Card sx={{ justifyContent: "center"}}>
-                    <CardMedia
-                        component="img"
-                        alt="green iguana"
-                        sx={{maxHeight: "60vh"}}
-                        image="/img/headshot1.jpg"
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Let's talk!
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            I'm always open to a good discussion about anything. Whether that be a business proposal,
-                            discussing new technology, networking, or just chatting.
-                        </Typography>
-                    </CardContent>
-                    <CardActions sx={{ width: "100%" }}>
-                        <List sx={{ width: "100%" }}>
-                            {this.state.socials.map((social) => {
-                                return (
-                                    <ListItemButton size="small" href={social.link} sx={{ width: "100%" }} onClick={() => {
-                                        logEvent(analytics, "social_clicked", {
-                                            name: social.name
-                                        })
-                                    }}>
-                                        <ListItemAvatar>
-                                            <Avatar>
-                                                {social.icon}
-                                            </Avatar>
-                                        </ListItemAvatar>
-                                        <ListItemText primary={social.name}/>
-                                    </ListItemButton>
-                                )
-                            })}
-                            <Button variant={"contained"} href="/leo-forney.vcf" sx={{ mt: 2 }} onClick={() => {
-                                logEvent(analytics, 'contact_downloaded');
-                            }}>
-                                Save contact
-                            </Button>
-                        </List>
-                    </CardActions>
-                </Card>
-                <Box sx={{height: 15}} />
+                    <Card sx={{ justifyContent: "center"}}>
+                        <CardMedia
+                            component="img"
+                            alt="green iguana"
+                            sx={{maxHeight: "60vh"}}
+                            image="/img/headshot1.jpg"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                Let's talk!
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                I'm always open to a good discussion about anything. Whether that be a business proposal,
+                                discussing new technology, networking, or just chatting.
+                            </Typography>
+                        </CardContent>
+                        <CardActions sx={{ width: "100%" }}>
+                            <List sx={{ width: "100%" }}>
+                                {this.state.socials.map((social) => {
+                                    return (
+                                        <ListItemButton size="small" href={social.link} sx={{ width: "100%" }} onClick={() => {
+                                            logEvent(analytics, "social_clicked", {
+                                                name: social.name
+                                            })
+                                        }}>
+                                            <ListItemAvatar>
+                                                <Avatar>
+                                                    {social.icon}
+                                                </Avatar>
+                                            </ListItemAvatar>
+                                            <ListItemText primary={social.name}/>
+                                        </ListItemButton>
+                                    )
+                                })}
+                                <Button variant={"contained"} href="/leo-forney.vcf" sx={{ mt: 2 }} onClick={() => {
+                                    logEvent(analytics, 'contact_downloaded');
+                                }}>
+                                    Save contact
+                                </Button>
+                            </List>
+                        </CardActions>
+                    </Card>
+                    <Box sx={{height: 15}} />
 
-            </Grid>
-
+                </Grid>
+            </Container>
         )
     }
 

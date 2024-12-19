@@ -11,8 +11,6 @@ class ProjectDetailPage extends React.Component {
     }
 
     render() {
-        const { match } = this.props;
-
         return (
             <div>
                 <Typography variant="h2" gutterBottom>

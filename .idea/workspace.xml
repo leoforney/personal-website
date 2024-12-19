@@ -4,72 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d86af25-2108-42c7-9c72-796a154bc177" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/bun.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/migrate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/migrations/001_create_tables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/postsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/projectsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/controllers/topicsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/postModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/projectModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/models/topicModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/admin.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/posts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/projects.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes/topics.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tests.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/convertEditorData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/WebsiteFirebaseConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.firebaserc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9d86af25-2108-42c7-9c72-796a154bc177" name="Changes" comment="Create backend">
+      <change afterPath="$PROJECT_DIR$/frontend/src/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/PostDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProjectDetails.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ProjectList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/PostPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createVCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/createVCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/PassChecker.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/PassChecker.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/PointCloudVR.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/PointCloudVR.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/RequestIt.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/RequestIt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/SmartDoorPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/SmartDoorPi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/caselist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/caselist.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/cases.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/cases.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/headshot1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/headshot1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/passchecker.gif" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/passchecker.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/pointcloudvrdemo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/pointcloudvrdemo.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/requestit/newsession.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/newsession.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/requestit/queueaccept.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/queueaccept.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/requestit/requestnewsong.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/requestnewsong.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/requestit/sessioncreated.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/sessioncreated.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smartdoorpi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/smartdoorpi.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/stairs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/stairs.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/leo-forney.vcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AboutPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ContactPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DetailView.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailView.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawerAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DrawerAppBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/NotFoundPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProjectDetailPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProjectsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile-backend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/withRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/withRouter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/img/headshot1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/headshot1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/AboutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AboutPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ContactPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ContactPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/NotFoundPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/NotFoundPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ProjectDetailPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProjectDetailPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ProjectsPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +79,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/media/leo/ExtSSD/IdeaProjects/website/backend/index.ts",
+    "last_opened_file_path": "/media/leo/ExtSSD/IdeaProjects/website/frontend/public/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -151,11 +103,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public/img" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/frontend/src" />
       <recent name="$PROJECT_DIR$/frontend/public" />
       <recent name="$PROJECT_DIR$/public/cases" />
-      <recent name="$PROJECT_DIR$/build/img/requestit" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend" />
@@ -313,7 +265,7 @@
       <workItem from="1713647040935" duration="18000" />
       <workItem from="1734564597247" duration="3293000" />
       <workItem from="1734568891015" duration="3054000" />
-      <workItem from="1734577315933" duration="6851000" />
+      <workItem from="1734577315933" duration="9239000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project with sample cases">
       <created>1672341365299</created>
@@ -380,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713631680116</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Create backend">
+      <option name="closed" value="true" />
+      <created>1734584306412</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734584306412</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +368,8 @@
     <MESSAGE value="Add analytics to website to track pages viewed" />
     <MESSAGE value="Add new stuff" />
     <MESSAGE value="Remove useless firebase config file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove useless firebase config file" />
+    <MESSAGE value="Create backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

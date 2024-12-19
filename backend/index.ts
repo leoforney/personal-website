@@ -9,7 +9,10 @@ import { migrate } from "./config/migrate";
     serve({
         port: 3000,
         async fetch(req) {
-            return await router(req, pool);
+            const res = await router(req, pool);
+            res.headers.set('Access-Control-Allow-Origin', '*');
+            res.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+            return res;
         },
     });
 

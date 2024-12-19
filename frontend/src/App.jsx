@@ -1,13 +1,11 @@
 import './App.css';
 import React from 'react';
 import DrawerAppBar from "./DrawerAppBar.jsx";
-import ProjectsPage from "./ProjectsPage.jsx";
 import ContactPage from "./ContactPage.jsx";
-import {Container, Fab, Fade, useScrollTrigger} from "@mui/material";
+import {Container, createTheme, Fab, Fade, ThemeProvider, useScrollTrigger} from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 
 import {
     createBrowserRouter,
@@ -17,19 +15,45 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./NotFoundPage.jsx";
 import AboutPage from "./AboutPage.jsx";
-import ProjectDetailPage from "./ProjectDetailPage.jsx";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import PostPage from "./pages/PostPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" errorElement={<ErrorPage />}>
             <Route path="" element={<AboutPage/>}/>
             <Route path="about" element={<AboutPage />}/>
-            <Route path="projects" element={<ProjectsPage/>}/>
+            <Route path="/projects" element={<HomePage />} />
+            <Route path="/projects/:id" element={<ProjectPage />} />
+            <Route path="/posts/:id" element={<PostPage />} />
             <Route path="contact" element={<ContactPage/>}/>
-            <Route path="projects/:name" element={<ProjectDetailPage />} />
         </Route>
     )
 );
+
+const theme = createTheme({
+    palette: {
+        mode: 'dark',
+    },
+    typography: {
+        fontFamily: [
+            "Source Code Pro",
+            "Menlo",
+            "Monaco",
+            "Consolas",
+            "Monospaced"
+        ].join(','),
+    },
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: `
+                @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+            `,
+        }
+    }
+});
+
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -113,19 +137,21 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <ElevationScroll {...this.props}>
-                    <DrawerAppBar />
-                </ElevationScroll>
-                <Box sx={{height: 0}} id="back-to-top-anchor" />
-                <Container fixed>
-                    <RouterProvider router={router} />
-                </Container>
+                <ThemeProvider theme={theme}>
+                    <ElevationScroll {...this.props}>
+                        <DrawerAppBar />
+                    </ElevationScroll>
+                    <Box sx={{height: 0}} id="back-to-top-anchor" />
+                    <Container maxWidth={"xl"}>
+                        <RouterProvider router={router} />
+                    </Container>
 
-                <ScrollTop {...this.props}>
-                    <Fab size="small" aria-label="scroll back to top">
-                        <KeyboardArrowUpIcon />
-                    </Fab>
-                </ScrollTop>
+                    <ScrollTop {...this.props}>
+                        <Fab size="small" aria-label="scroll back to top">
+                            <KeyboardArrowUpIcon />
+                        </Fab>
+                    </ScrollTop>
+                </ThemeProvider>
             </div>
         )
     }
