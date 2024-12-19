@@ -4,13 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d86af25-2108-42c7-9c72-796a154bc177" name="Changes" comment="Add new stuff">
+    <list default="true" id="9d86af25-2108-42c7-9c72-796a154bc177" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/bun.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/config/db.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/config/migrate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/config/migrations/001_create_tables.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/postsController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/projectsController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/controllers/topicsController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/postModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/projectModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/models/topicModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/admin.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/posts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/projects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/routes/topics.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/tests.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utils/convertEditorData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/WebsiteFirebaseConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.firebaserc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/cases/cases.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/cases/cases.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DetailView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ProjectsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WebsiteFirebaseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WebsiteFirebaseConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createVCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/createVCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/PassChecker.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/PassChecker.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/PointCloudVR.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/PointCloudVR.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/RequestIt.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/RequestIt.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/SmartDoorPi.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/SmartDoorPi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/caselist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/caselist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cases/cases.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/cases/cases.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/headshot1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/headshot1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/passchecker.gif" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/passchecker.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/pointcloudvrdemo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/pointcloudvrdemo.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/requestit/newsession.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/newsession.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/requestit/queueaccept.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/queueaccept.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/requestit/requestnewsong.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/requestnewsong.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/requestit/sessioncreated.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/requestit/sessioncreated.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smartdoorpi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/smartdoorpi.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/stairs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/stairs.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/leo-forney.vcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AboutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/AboutPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ContactPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ContactPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DetailView.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DetailView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DrawerAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/DrawerAppBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotFoundPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/NotFoundPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProjectDetailPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProjectsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile-backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/withRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/withRouter.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +81,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -30,6 +90,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -41,13 +104,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Bun.Backend.executor": "Debug",
+    "Bun.index.ts.executor": "Run",
+    "Docker.Local deploy.executor": "Run",
+    "Docker.Server deploy.executor": "Run",
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "HTTP Request.tests | Create a new project.executor": "Run",
+    "HTTP Request.tests | Create a new topic.executor": "Run",
+    "HTTP Request.tests | Get a specific project by ID.executor": "Run",
+    "HTTP Request.tests | Get a specific topic by ID.executor": "Run",
+    "HTTP Request.tests | Get all posts.executor": "Run",
+    "HTTP Request.tests | Get all projects.executor": "Run",
+    "HTTP Request.tests | Get all topics.executor": "Run",
+    "HTTP Request.tests | Protected admin route to create a post.executor": "Run",
+    "HTTP Request.tests | Update an existing post.executor": "Run",
+    "Node.js.Backend server.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/leo/IdeaProjects/website",
+    "last_opened_file_path": "/media/leo/ExtSSD/IdeaProjects/website/backend/index.ts",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -56,26 +136,63 @@
     "nodejs_package_manager_path": "npm",
     "npm.Build.executor": "Run",
     "npm.Start development.executor": "Run",
-    "ts.external.directory.path": "/snap/intellij-idea-ultimate/401/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "settings.editor.selected.configurable": "settings.bun",
+    "ts.external.directory.path": "/home/leo/.local/share/JetBrains/Toolbox/apps/intellij-idea-ultimate/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+      <recent name="$PROJECT_DIR$/frontend/public" />
       <recent name="$PROJECT_DIR$/public/cases" />
       <recent name="$PROJECT_DIR$/build/img/requestit" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/public/cases" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Start development">
-    <configuration name="Create VCard" type="NodeJSConfigurationType" path-to-js-file="createVCard.js" working-dir="$PROJECT_DIR$">
+  <component name="RunManager" selected="Bun.Backend">
+    <configuration name="Backend" type="BunRunConfiguration">
+      <option name="program" value="index.ts" />
+      <option name="runtimeParameters">
+        <list>
+          <option value="--hot" />
+        </list>
+      </option>
+      <option name="stopOnEntry" value="true" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/backend" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests | Get a specific topic by ID" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/tests.http" executionIdentifier="Get a specific topic by ID" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tests | Get all posts" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/tests.http" executionIdentifier="Get all posts" index="9" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tests | Get all topics" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/tests.http" executionIdentifier="Get all topics" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tests | Protected admin route to create a post" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/tests.http" executionIdentifier="Protected admin route to create a post" index="7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="tests | Update an existing post" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/backend/tests.http" executionIdentifier="Update an existing post" index="8" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Create VCard" type="NodeJSConfigurationType" path-to-js-file="frontend/createVCard.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="Send to rheseus" type="ShConfigurationType" activateToolWindowBeforeRun="false">
@@ -94,6 +211,21 @@
       <method v="2">
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build" run_configuration_type="js.build_tools.npm" />
       </method>
+    </configuration>
+    <configuration name="Local deploy" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration name="Build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -116,11 +248,35 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Bun.Backend" />
+      <item itemvalue="Docker.Local deploy" />
+      <item itemvalue="HTTP Request.tests | Get a specific topic by ID" />
+      <item itemvalue="HTTP Request.tests | Get all posts" />
+      <item itemvalue="HTTP Request.tests | Get all topics" />
+      <item itemvalue="HTTP Request.tests | Protected admin route to create a post" />
+      <item itemvalue="HTTP Request.tests | Update an existing post" />
       <item itemvalue="Node.js.Create VCard" />
       <item itemvalue="npm.Start development" />
       <item itemvalue="npm.Build" />
       <item itemvalue="Shell Script.Send to rheseus" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.tests | Get all posts" />
+        <item itemvalue="HTTP Request.tests | Get all topics" />
+        <item itemvalue="HTTP Request.tests | Get a specific topic by ID" />
+        <item itemvalue="HTTP Request.tests | Update an existing post" />
+        <item itemvalue="HTTP Request.tests | Protected admin route to create a post" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -153,7 +309,11 @@
       <workItem from="1708573088703" duration="3000" />
       <workItem from="1713234362923" duration="1494000" />
       <workItem from="1713310607874" duration="35000" />
-      <workItem from="1713630353653" duration="1267000" />
+      <workItem from="1713630353653" duration="1399000" />
+      <workItem from="1713647040935" duration="18000" />
+      <workItem from="1734564597247" duration="3293000" />
+      <workItem from="1734568891015" duration="3054000" />
+      <workItem from="1734577315933" duration="6851000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project with sample cases">
       <created>1672341365299</created>
@@ -212,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713310636193</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Remove useless firebase config file">
+      <option name="closed" value="true" />
+      <created>1713631680116</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713631680116</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +407,23 @@
     <MESSAGE value="Specific project detail page" />
     <MESSAGE value="Add analytics to website to track pages viewed" />
     <MESSAGE value="Add new stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new stuff" />
+    <MESSAGE value="Remove useless firebase config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove useless firebase config file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/backend/routes/admin.ts</url>
+          <line>21</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

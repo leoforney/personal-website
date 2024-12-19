@@ -1,5 +1,5 @@
 import React from 'react';
-import DetailView from "./DetailView";
+import DetailView from "./DetailView.jsx";
 import Typography from "@mui/material/Typography";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { firebaseApp } from "./WebsiteFirebaseConfig";

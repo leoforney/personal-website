@@ -1,7 +1,7 @@
 import React from 'react';
-import DetailView from "./DetailView";
+import DetailView from "./DetailView.jsx";
 import Typography from "@mui/material/Typography";
-import withRouter from "./withRouter";
+import withRouter from "./withRouter.jsx";
 
 class ProjectDetailPage extends React.Component {
 

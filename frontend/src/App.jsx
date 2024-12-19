@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
-import DrawerAppBar from "./DrawerAppBar";
-import ProjectsPage from "./ProjectsPage";
-import ContactPage from "./ContactPage";
+import DrawerAppBar from "./DrawerAppBar.jsx";
+import ProjectsPage from "./ProjectsPage.jsx";
+import ContactPage from "./ContactPage.jsx";
 import {Container, Fab, Fade, useScrollTrigger} from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PropTypes from "prop-types";
@@ -15,9 +15,9 @@ import {
     Route,
     RouterProvider,
 } from "react-router-dom";
-import ErrorPage from "./NotFoundPage";
-import AboutPage from "./AboutPage";
-import ProjectDetailPage from "./ProjectDetailPage";
+import ErrorPage from "./NotFoundPage.jsx";
+import AboutPage from "./AboutPage.jsx";
+import ProjectDetailPage from "./ProjectDetailPage.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
