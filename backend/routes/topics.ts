@@ -1,4 +1,5 @@
 import { createTopic, getTopicById, getAllTopics } from "../controllers/topicsController";
+import adminRoute from "./admin.ts";
 
 export default async function topicsRoute(req: Request, pool: any) {
     const url = new URL(req.url);
@@ -15,6 +16,10 @@ export default async function topicsRoute(req: Request, pool: any) {
     }
 
     if (req.method === "POST") {
+        const deniedResponse = await adminRoute(req, pool);
+        if (deniedResponse) {
+            return deniedResponse;
+        }
         const body = await req.json();
         const newTopic = await createTopic(pool, body);
         return new Response(JSON.stringify(newTopic), { status: 201 });

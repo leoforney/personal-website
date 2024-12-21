@@ -1,6 +1,10 @@
-import {createPost, updatePost} from "../controllers/postsController";
+import { readFileSync, existsSync } from "fs";
 
-const ADMIN_PASSWORD = "password";
+// Check if the secret file exists and read it, otherwise fallback
+const SECRET_PATH = "/run/secrets/admin_password";
+const ADMIN_PASSWORD = existsSync(SECRET_PATH)
+    ? readFileSync(SECRET_PATH, "utf-8").trim()
+    : process.env.ADMIN_PASSWORD || "password";
 
 export default async function adminRoute(req: Request, pool: any) {
     const url = new URL(req.url);
@@ -10,18 +14,4 @@ export default async function adminRoute(req: Request, pool: any) {
         return new Response("Unauthorized", { status: 401 });
     }
 
-    if (req.method === "POST" && url.pathname.includes("/api/admin/create-post")) {
-        const data = await req.json();
-        const post = await createPost(pool, data);
-        return new Response(JSON.stringify(post), { status: 201 });
-    }
-
-    if (req.method === "PATCH" && url.pathname.includes("/api/admin/update-post")) {
-        const data: any = await req.json();
-        const postId = data.post_id;
-        const post = await updatePost(pool, postId, data);
-        return new Response(JSON.stringify(post), { status: 201 });
-    }
-
-    return new Response("Not found", { status: 404 });
 }

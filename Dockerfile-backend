@@ -1,8 +1,0 @@
-FROM oven/bun:latest
-WORKDIR /app
-
-COPY backend/package.json .
-RUN bun install
-
-COPY backend/ .
-CMD ["bun", "run", "index.ts"]

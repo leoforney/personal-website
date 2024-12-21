@@ -15,19 +15,21 @@ import {
 } from "react-router-dom";
 import ErrorPage from "./NotFoundPage.jsx";
 import AboutPage from "./AboutPage.jsx";
-import ProjectPage from "./pages/ProjectPage.jsx";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage.jsx";
 import PostPage from "./pages/PostPage.jsx";
-import HomePage from "./pages/HomePage.jsx";
+import ProjectsPage from "./pages/ProjectsPage.jsx";
+import Admin from "./components/admin/Admin.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" errorElement={<ErrorPage />}>
             <Route path="" element={<AboutPage/>}/>
             <Route path="about" element={<AboutPage />}/>
-            <Route path="/projects" element={<HomePage />} />
-            <Route path="/projects/:id" element={<ProjectPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectDetailsPage />} />
             <Route path="/posts/:id" element={<PostPage />} />
             <Route path="contact" element={<ContactPage/>}/>
+            <Route path="admin" element={<Admin/>}/>
         </Route>
     )
 );
@@ -47,9 +49,6 @@ const theme = createTheme({
     },
     components: {
         MuiCssBaseline: {
-            styleOverrides: `
-                @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
-            `,
         }
     }
 });
@@ -136,23 +135,21 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <ThemeProvider theme={theme}>
-                    <ElevationScroll {...this.props}>
-                        <DrawerAppBar />
-                    </ElevationScroll>
-                    <Box sx={{height: 0}} id="back-to-top-anchor" />
-                    <Container maxWidth={"xl"}>
-                        <RouterProvider router={router} />
-                    </Container>
+            <ThemeProvider theme={theme}>
+                <ElevationScroll {...this.props}>
+                    <DrawerAppBar />
+                </ElevationScroll>
+                <Box sx={{height: 0}} id="back-to-top-anchor" />
+                <Container maxWidth={"xl"}>
+                    <RouterProvider router={router} />
+                </Container>
 
-                    <ScrollTop {...this.props}>
-                        <Fab size="small" aria-label="scroll back to top">
-                            <KeyboardArrowUpIcon />
-                        </Fab>
-                    </ScrollTop>
-                </ThemeProvider>
-            </div>
+                <ScrollTop {...this.props}>
+                    <Fab size="small" aria-label="scroll back to top">
+                        <KeyboardArrowUpIcon />
+                    </Fab>
+                </ScrollTop>
+            </ThemeProvider>
         )
     }
 

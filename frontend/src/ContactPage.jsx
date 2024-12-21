@@ -73,11 +73,7 @@ class ContactPage extends React.Component {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div">
-                                Let's talk!
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                I'm always open to a good discussion about anything. Whether that be a business proposal,
-                                discussing new technology, networking, or just chatting.
+                                My contact
                             </Typography>
                         </CardContent>
                         <CardActions sx={{ width: "100%" }}>
@@ -98,7 +94,7 @@ class ContactPage extends React.Component {
                                         </ListItemButton>
                                     )
                                 })}
-                                <Button variant={"contained"} href="/leo-forney.vcf" sx={{ mt: 2 }} onClick={() => {
+                                <Button variant={"contained"} href="/api/leo.vcf" sx={{ mt: 2 }} onClick={() => {
                                     logEvent(analytics, 'contact_downloaded');
                                 }}>
                                     Save contact

@@ -9,5 +9,6 @@ export async function getAllProjects(pool: any) {
 }
 
 export async function createProject(pool: any, data: any) {
+    console.log(data);
     return await insertProject(pool, data);
 }

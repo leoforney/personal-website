@@ -1,27 +1,23 @@
 services:
-  backend:
-    runtime: runc
+  app:
     build:
       context: .
-      dockerfile: Dockerfile-backend
-    volumes:
-      - ./backend:/app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
-      - postgres
-
-  frontend:
-    runtime: runc
-    image: nginx:alpine
-    volumes:
-      - ./frontend:/usr/share/nginx/html
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-    ports:
-      - "8080:80"
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: password
+      DB_DATABASE: exampledb
+      DB_PORT: 5432
+    secrets:
+      - admin_password
 
   postgres:
-    runtime: runc
     image: postgres:latest
     environment:
       POSTGRES_USER: postgres
@@ -31,6 +27,15 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+secrets:
+  admin_password:
+    file: /home/leo/admin_password.txt
 
 volumes:
   postgres_data:

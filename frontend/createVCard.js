@@ -10,12 +10,9 @@ vCard.lastName = 'Forney';
 vCard.photo.embedFromFile('./public/img/headshot1.jpg')
 vCard.logo.embedFromFile('./public/img/headshot1.jpg')
 vCard.cellPhone = '847-946-9328';
-vCard.title = 'Software Developer';
+vCard.title = 'Software Engineer';
 vCard.email = "forneyleo@gmail.com";
 vCard.url = 'https://leoforney.me';
 
 
-//save to file
-vCard.saveToFile('./public/leo-forney.vcf');
-
-console.log("Created VCard")
+vCard().getFormattedString()

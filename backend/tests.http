@@ -5,11 +5,11 @@ GET http://localhost:3000/api/projects
 GET http://localhost:3000/api/projects?id=1
 
 ### Create a new project
-POST http://localhost:3000/api/projects
+POST http://localhost:3000/api/projects?password=password
 Content-Type: application/json
 
 {
-  "name": "RQL",
+  "name": "AccelSort",
   "description": "A description for the new project"
 }
 
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### Protected admin route to create a post
-POST http://localhost:3000/api/admin/create-post?password=password
+POST http://localhost:3000/api/posts?password=password
 Content-Type: application/json
 
 {
@@ -40,7 +40,7 @@ Content-Type: application/json
 
 
 ### Update an existing post
-PATCH http://localhost:3000/api/admin/update-post/1?password=password
+PATCH http://localhost:3000/api/posts/1?password=password
 Content-Type: application/json
 
 {

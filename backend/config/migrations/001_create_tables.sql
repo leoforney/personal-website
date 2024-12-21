@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS projects
 (
     id          SERIAL PRIMARY KEY,
     name        TEXT NOT NULL,
+    color       VARCHAR(10) NOT NULL,
     topic_id INT REFERENCES topics(id) ON UPDATE CASCADE,
     description TEXT
 );

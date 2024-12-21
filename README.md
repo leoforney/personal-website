@@ -1,3 +1,8 @@
 # Code powering my personal website
 
-Created using React, deployed to [https://leoforney.me](https://leoforney.me)
+Stack:
+- MUI
+- React
+- Bun
+- Postgres
+- Docker

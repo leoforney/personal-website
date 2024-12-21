@@ -8,7 +8,7 @@ export async function fetchAllTopics(pool: any) {
     return result.rows;
 }
 
-export async function insertTopic(pool: any, { name }: any) {
+export async function insertTopic(pool: any, { name, color }: any) {
     const result = await pool.query(
         "INSERT INTO topics (name) VALUES ($1) RETURNING *",
         [name]
